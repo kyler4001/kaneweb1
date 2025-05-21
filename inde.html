@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nike-Inspired IT Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-container" id="loginForm">
+    <h1>JUST LOGIN IT</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">LOGIN</button>
+    <div class="quote">
+      <p>“Innovation is the outcome of a habit, not a random act.” – Sukant Ratnakar</p>
+      <p>“Any sufficiently advanced technology is indistinguishable from magic.” – Arthur C. Clarke</p>
+    </div>
+  </div>
+
+  <div class="dashboard" id="dashboard">
+    <h2>Welcome to the Dashboard</h2>
+    <a href="https://docs.google.com/document/d/1G9r-NW-j2eZnFs54ykF0DGacjyPA0W5i6AJNa7_OjGw/edit?usp=sharing" target="_blank">📄 Google Docs</a>
+    <a href="https://docs.google.com/spreadsheets/d/1lWvMNbwIgxNZDPD9t5WQXw0SOQCNhWD6uViWaDI2egA/edit?usp=sharing" target="_blank">📊 Google Sheets</a>
+    <a href="https://docs.google.com/presentation/d/1mn1pYAw9ICu8LGSZw83C7B_ZTG2GLHsRD83Upqe0YgM/edit?usp=sharing" target="_blank">🎞 Google Slides</a>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user && pass) {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+      } else {
+        alert("Enter both username and password!");
+      }
+    }
+  </script>
+
+</body>
+</html>
